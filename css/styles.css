@@ -1,3 +1,4 @@
+/* Light Mode Variables */
 :root {
     --primary-blue: #007bff;
     --dark-blue: #0056b3;
@@ -18,6 +19,28 @@
     --darkestBlue: #215961;
 }
 
+/* Dark Mode Variables */
+.dark-mode {
+    --primary-blue: #2196a7;
+    --dark-blue: #1f2426;
+    --light-gray: #343a40;
+    --medium-gray: #6c757d;
+    --dark-gray: #ffffff;
+    --black: #ffffff;
+    --white: #000000;
+    --background-color: #dee2e4;
+    --accent-pink: #ffd1dc;
+    --dark: #faf6f3;
+    --gray: #4b5859;
+    --blueGray: #293e41;
+    --lightestBlue: #b4dad7;
+    --lightBlue: #519ca4;
+    --blue: #2196a7;
+    --darkBlue: #307982;
+    --darkestBlue: #215961;
+}
+
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -26,37 +49,35 @@
     font-family: 'Oswald', sans-serif;
 }
 
-body {
+html, body {
+    margin: 0;
     line-height: 1.6;
     background-color: var(--dark);
     color: var(--lightestBlue);
     font-family: "Bitter", Helvetica, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Navbar Styles  */
-
-.wrapper{
+/* Navbar Styles */
+.wrapper {
     position: fixed;
     top: 0;
-    /*left: -100%;*/
     right: -100%;
     height: 100%;
     width: 100%;
     background: #000;
-    /*background: linear-gradient(90deg, #f92c78, #4114a1);*/
-    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
+    z-index: 1000; /* Ensures the wrapper is on top */
     transition: all 0.6s ease-in-out;
 }
-#active:checked ~ .wrapper{
-    /*left: 0;*/
-    right:0;
+
+#active:checked ~ .wrapper {
+    right: 0;
 }
-.menu-btn{
+
+.menu-btn {
     position: absolute;
-    z-index: 2;
+    z-index: 1100; /* Ensures the button is on top of the wrapper */
     right: 20px;
-    /* left: 20px; */
     top: 20px;
     height: 50px;
     width: 50px;
@@ -66,14 +87,13 @@ body {
     font-size: 20px;
     cursor: pointer;
     color: #fff;
-    /* background: linear-gradient(90deg, #f92c78, #4114a1); */
     background: linear-gradient(375deg, #1cc7d0, #2ede98);
-    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
     transition: all 0.3s ease-in-out;
 }
+
 .menu-btn span,
 .menu-btn:before,
-.menu-btn:after{
+.menu-btn:after {
     content: "";
     position: absolute;
     top: calc(50% - 1px);
@@ -82,35 +102,39 @@ body {
     border-bottom: 2px solid #000;
     transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-.menu-btn:before{
+
+.menu-btn:before {
     transform: translateY(-8px);
 }
-.menu-btn:after{
+
+.menu-btn:after {
     transform: translateY(8px);
 }
 
-
 .close {
-    z-index: 1;
+    z-index: 1050; /* Ensures the close element is below the menu-btn but above other content */
     width: 100%;
     height: 100%;
     pointer-events: none;
     transition: background .6s;
 }
 
-/* closing animation */
+/* Closing animation */
 #active:checked + .menu-btn span {
     transform: scaleX(0);
 }
+
 #active:checked + .menu-btn:before {
     transform: rotate(45deg);
     border-color: #fff;
 }
+
 #active:checked + .menu-btn:after {
     transform: rotate(-45deg);
     border-color: #fff;
 }
-.wrapper ul{
+
+.wrapper ul {
     position: absolute;
     top: 60%;
     left: 50%;
@@ -119,11 +143,13 @@ body {
     list-style: none;
     text-align: center;
 }
-.wrapper ul li{
+
+.wrapper ul li {
     height: 10%;
     margin: 15px 0;
 }
-.wrapper ul li a{
+
+.wrapper ul li a {
     text-decoration: none;
     font-size: 30px;
     font-weight: 500;
@@ -137,12 +163,11 @@ body {
     transition: all 0.3s ease;
     transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-.wrapper ul li a:after{
+
+.wrapper ul li a:after {
     position: absolute;
     content: "";
     background: #fff;
-        /*background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);*/
-    /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
     width: 100%;
     height: 100%;
     left: 0;
@@ -152,52 +177,58 @@ body {
     z-index: -1;
     transition: transform 0.3s ease;
 }
-.wrapper ul li a:hover:after{
+
+.wrapper ul li a:hover:after {
     transform: scaleY(1);
 }
-.wrapper ul li a:hover{
+
+.wrapper ul li a:hover {
     color: #1a73e8;
 }
-input[type="checkbox"]{
+
+input[type="checkbox"] {
     display: none;
 }
-.content{
+
+.content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: 500; /* Ensures the content is below the wrapper but above the background */
     text-align: center;
     width: 100%;
     color: #202020;
 }
-.content .title{
+
+.content .title {
     font-size: 40px;
     font-weight: 700;
 }
-.content p{
+
+.content p {
     font-size: 35px;
     font-weight: 600;
 }
 
-#active:checked ~ .wrapper ul li a{
-    opacity: 1; 
+#active:checked ~ .wrapper ul li a {
+    opacity: 1;
 }
-.wrapper ul li a{
+
+.wrapper ul li a {
     transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
     transform: translateX(100px);
 }
-#active:checked ~ .wrapper ul li a{
+
+#active:checked ~ .wrapper ul li a {
     transform: none;
-    transition-timing-function: ease, cubic-bezier(.1,1.3,.3,1); /* easeOutBackを緩めた感じ */
+    transition-timing-function: ease, cubic-bezier(.1,1.3,.3,1);
     transition-delay: .6s;
     transform: translateX(-100px);
 }
 
-
-
 /* Main Section Styles */
-main {
+.Header-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,7 +266,6 @@ main {
     text-decoration: none;
     font-size: 18px;
 }
-
 
 .social-icons .social-icon:hover {
     color: var(--primary-blue);
@@ -294,7 +324,6 @@ main {
     color: var(--medium-gray);
 }
 
-
 /* Footer Styles */
 footer {
     background-color: var(--dark-gray);
@@ -337,24 +366,27 @@ header, main {
         width: 200px;
         height: 200px;
     }
+
     .job-description {
         text-align: center;
     }
-    
 }
 
 /* Skillsets Section */
-
 .skillsets {
     text-align: left;
     margin-top: 2rem;
+    padding: 60px 0;
+    background-color: var(--background-color);
+    color: var(--dark);
 }
 
 .skillsets h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: var(--dark-gray);
+    color: var(--primary-blue);
     font-size: 1.5rem;
     margin-bottom: 1.2rem;
+    margin-left: 0.5rem;
 }
 
 .carousel {
@@ -391,7 +423,6 @@ header, main {
     text-align: left;
     transition: transform 0.3s ease;
 }
-
 
 .card h3 {
     font-size: 1.5rem;
@@ -432,6 +463,7 @@ header, main {
     margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .carousel-indicators .indicator.active {
@@ -447,11 +479,568 @@ header, main {
     .card {
         max-width: 90%;
         margin: 0.5rem 0;
+        margin-left: 1.5rem;
+    }
+    
+}
+
+
+
+/*My Recent Code Css */
+.recent-work {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    border-radius: 30px;
+    background-color: var(--background-color);
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    color: #1a202c;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+  }
+  
+  a {
+    color: #3182ce;
+    text-decoration: none;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    color: white;
+  }
+  
+  .project-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .navy {
+    background-color: #2a4365;
+  }
+  
+  .teal {
+    background-color: #319795;
+  }
+  
+  .blue {
+    background-color: #3182ce;
+  }
+  
+  .gray {
+    background-color: #4a5568;
+  }
+  
+  .orange {
+    background-color: #dd6b20;
+  }
+  
+  .green {
+    background-color: #2f855a;
+  }
+  
+  .button {
+    background-color: #6b46c1;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+  /* Footer Styles */
+
+  .project-section {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: var(--primary-blue);
+    width: 100%;
+    margin-top: 100px;
+}
+
+.project-section .card {
+    background-color: #24282f;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    max-width: 1000px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.project-start {
+    padding: 40px 20px;
+    background-color: #24282f;
+    color: white;
+}
+
+.project-start h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.project-start p {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.project-start button {
+    background-color: transparent;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-start button:hover {
+    background-color: #00ffcc;
+    color: #24282f;
+}
+
+.footer {
+    background-color: var(--primary-blue);
+    padding: 40px 20px;
+    color: white;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    text-align: center;
+    color: var(--light-gray);
+}
+
+.footer .social-icons {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer .social-icons img {
+    width: 24px;
+    height: 24px;
+    border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-section {
+        padding: 20px;
+    }
+
+    .project-section .card {
+        width: 100%;
+        margin-bottom: 50px;
+        max-width: 350px;
+    }
+
+    .project-start h1 {
+        font-size: 2em;
+    }
+
+    .project-start p {
+        font-size: 1em;
+    }
+
+    .footer p {
+        font-size: 1em;
     }
 }
 
-/* Hiding Image CSS */
+@media (max-width: 480px) {
+    .project-section {
+        padding: 10px;
+        height: auto;
+    }
 
-.hide-image {
-    display: none;
+    .project-section .card {
+        margin-bottom: 30px;
+    }
+
+    .project-start h1 {
+        font-size: 1.5em;
+    }
+
+    .project-start p {
+        font-size: 0.9em;
+    }
+
+    .footer p {
+        font-size: 0.9em;
+    }
 }
+
+/* Resume section Stlyes  */
+/* Resume Section */
+
+.resume-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.resume-section {
+    padding: 60px 0;
+    background-color: var(--background-color);
+    color: var(--dark);
+}
+
+.resume-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: var(--primary-blue);
+}
+
+.resume-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.resume-content > div {
+    flex: 1;
+    margin: 0 15px;
+    max-width: 350px;
+}
+
+.resume-content h3 {
+    font-size: 24px;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+}
+
+.resume-content p, .resume-content ul {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.resume-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.resume-content ul li {
+    margin-bottom: 10px;
+}
+
+/* Download CV Button */
+.download-cv {
+    display: inline-block;
+    margin: 40px auto;
+    padding: 15px 30px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.download-cv:hover {
+    background-color: var(--dark-blue);
+}
+
+/* About me Section */
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.image {
+    flex: 1;
+    text-align: right;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .resume-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume-content > div {
+        max-width: 100%;
+        margin: 15px 0;
+    }
+
+    .resume-section h2 {
+        font-size: 28px;
+    }
+
+    .resume-content h3 {
+        font-size: 20px;
+    }
+
+    .resume-content p, .resume-content ul {
+        font-size: 14px;
+    }
+
+    .download-cv {
+        font-size: 16px;
+    }
+
+    .about-me {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .text, .image {
+        width: 100%;
+        margin: 0;
+    }
+
+    .image {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-section h2 {
+        font-size: 24px;
+    }
+
+    .resume-content h3 {
+        font-size: 18px;
+    }
+
+    .resume-content p, .resume-content ul {
+        font-size: 13px;
+    }
+
+    .download-cv {
+        font-size: 14px;
+        padding: 12px 25px;
+    }
+}
+
+/* Light Mode Button Styles */
+.theme-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Adjust this if you don't want full viewport height */
+}
+.styled-button {
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.styled-button:hover {
+    background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+    transform: scale(1.05);
+}
+
+.styled-button:active {
+    background: var(--dark-blue);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.styled-button:focus {
+    border: 2px solid var(--accent-pink);
+    box-shadow: 0 0 0 4px rgba(255, 105, 97, 0.2);
+}
+
+/* Dark Mode Button Styles */
+.dark-mode .styled-button {
+    background: linear-gradient(135deg, var(--blue), var(--darkBlue));
+    color: var(--white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .styled-button:hover {
+    background: linear-gradient(135deg, var(--darkBlue), var(--blue));
+    transform: scale(1.05);
+}
+
+.dark-mode .styled-button:active {
+    background: var(--darkBlue);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .styled-button:focus {
+    border: 2px solid var(--accent-pink);
+    box-shadow: 0 0 0 4px rgba(255, 105, 97, 0.4);
+}
+
+
+/* Animations For my styles */
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.styled-button:hover {
+    background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+    transform: scale(1.05);
+    animation: bounce 0.6s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header, .content, .resume-section, .about-me {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.wrapper ul li a {
+    animation: slideInFromRight 0.5s ease-out;
+}
+
+@keyframes cardHover {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.card:hover {
+    animation: cardHover 0.3s ease-in-out;
+}
+
+
+@keyframes carouselFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel-item {
+    animation: carouselFade 0.5s ease-in-out;
+}
+
+@keyframes themeToggle {
+    from {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.theme-button-container {
+    animation: themeToggle 0.3s ease-in-out;
+}
+
+

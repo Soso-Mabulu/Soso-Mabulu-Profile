@@ -34,7 +34,7 @@
     <br><br>
 
     <!-- Main Section -->
-    <main>
+    <section class="Header-section">
         <div class="profile-container">
             <div class="profile-text">
                 <p class="job-description">I'm a software engineer specializing in developing scalable web applications and systems.</p>
@@ -58,13 +58,185 @@
                 <p>Crafting code, creating futures.</p>
             </div>
         </div>
-    </main>
-
+    </section>
+    <!-- tHEME Button -->
+    <div class="theme-button-container">
+        <button id="theme-toggle" class="styled-button">Change Theme</button>
+    </div>
     
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Soluele Mabulu. All rights reserved.</p>
-    </footer>
+    <!-- Recent work code  -->
+    <section class="recent-work">
+        <h2>My Recent Work</h2>
+        <p>Here are a few past design projects I've worked on. Want to see more? <a href="mailto:example@email.com">Email me</a>.</p>
+        
+        <div class="project-grid">
+          <div class="project-card navy">
+            <h3>See some of my high-end, custom projets in html and css with js.</h3>
+            <a href="projects.html" class="button">Visit Projects</a>
+          </div>
+          
+          <div class="project-card teal">
+            <img src="images/tell-a-neva-image01.png" alt="Burkett & Co Chartered Professional Accountants">
+          </div>
+          
+          <div class="project-card blue">
+            <img src="images/tell-a-neva-services.png" alt="Chronicled">
+          </div>
+          
+          <div class="project-card gray">
+            <img src="images/tutorsite-home.png" alt="GLC Solutions">
+          </div>
+          
+          <div class="project-card orange">
+            <img src="images/tutorsite-programs.png" alt="Coupal">
+          </div>
+          
+          <div class="project-card green">
+            <img src="images/tutorsite-programs02.png" alt="Wedler Engineering">
+          </div>
+        </div>
+      </section>
+    
+      <!-- About me -->
+    <section class="about-me">
+        <div class="text">
+            <h2>About Me</h2>
+            <p>Hello! I'm Soluele Mabulu, a passionate software developer based in Potchefstroom, South Africa. Currently, I'm in my final year of pursuing a Bachelor of Science in Information Technology at North-West University, Potchefstroom. My journey in the tech world has equipped me with strong skills in HTML, CSS, Java, and web design, and I've gained valuable experience working as a student assistant and intern at APJ Automation.</p>
+            <p>In addition to my technical expertise, I run Tell A Neva Holdings, a Black-owned and managed company that provides services ranging from supply and delivery to web development and graphic design. When I'm not coding or managing my business, you'll find me immersed in my hobbies—whether it's producing music, reading a good book, gaming, or exploring the latest in technology.</p>
+            <p>Feel free to connect with me if you share similar interests or if you’re interested in collaborating on a project!</p>
+        </div>
+        <div class="image">
+            <img src="images/aboutme.JPG" alt="Soluele Mabulu">
+        </div>
+    </section>
+
+    <!-- My Skill set Section -->
+    <section class="skillsets">
+        <h2>My Skillsets</h2>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <!-- Card Set 1 -->
+                <div class="carousel-item active">
+                    <div class="card">
+                        <h3>Project Management</h3>
+                        <p>I start by defining the problem, identifying scope, curating requirement documentation, and estimating the project's ROI.</p>
+                        <div class="icons">
+                            <img src="images/jira.png" alt="Jira">
+                            <img src="images/confluence.png" alt="Confluence">
+                            <img src="images/trello.png" alt="Trello">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Web</h3>
+                        <p>My web projects are responsive, accessible, and intuitive for all walks of life while reassuring they will respond the same on any browser.</p>
+                        <div class="icons">
+                            <img src="images/windows.png" alt="Windows">
+                            <img src="images/mac.png" alt="Mac">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Mobile</h3>
+                        <p>The foundation for all my designs, my mobile projects specialize in accessibility while utilizing Material Design and Apple Human Design.</p>
+                        <div class="icons">
+                            <img src="images/android.png" alt="Android">
+                            <img src="images/ios.png" alt="iOS">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Set 2 -->
+                <div class="carousel-item">
+                    <div class="card">
+                        <h3>User Interface</h3>
+                        <p>Known as having "hawk eyes" by my peers, I strive for pixel-perfect finalized designs.</p>
+                        <div class="icons">
+                            <img src="path/to/sketch.png" alt="Sketch">
+                            <img src="path/to/invision.png" alt="InVision">
+                            <img src="path/to/xd.png" alt="XD">
+                            <img src="path/to/figma.png" alt="Figma">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>User Experience</h3>
+                        <p>Understanding the problem is key to solving it. I strive to mitigate assumption-based decisions and get to the core of the user's pain points.</p>
+                        <div class="icons">
+                            <img src="path/to/miro.png" alt="Miro">
+                            <img src="path/to/figma.png" alt="Figma">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Prototyping & Animation</h3>
+                        <p>In tandem with UX, I incorporate prototyping and animation to better help the users and engineers visualize how the product may act.</p>
+                        <div class="icons">
+                            <img src="path/to/invision.png" alt="InVision">
+                            <img src="path/to/protopie.png" alt="ProtoPie">
+                            <img src="path/to/figma.png" alt="Figma">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <button class="indicator active" data-slide-to="0"></button>
+                <button class="indicator" data-slide-to="1"></button>
+            </div>
+        </div>
+        <hr>
+        <hr>    
+    </section>
+    
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section">
+        <div class="container">
+            <h2>Resume</h2>
+            <div class="resume-content">
+                <div class="education">
+                    <h3>Education</h3>
+                    <p><strong>North-West University, Potchefstroom</strong></p>
+                    <p>Bachelor of Science in Information Technology</p>
+                    <p>Expected Graduation: 2024</p>
+                </div>
+                <div class="experience">
+                    <h3>Experience</h3>
+                    <p><strong>APJ Automation</strong> - Intern</p>
+                    <p>Responsibilities: Assisted in web development projects, coding, and programming tasks.</p>
+                    <p><strong>North-West University</strong> - Student Assistant</p>
+                    <p>Responsibilities: Helped in administrative tasks, assisted in student queries, and supported professors in various duties.</p>
+                </div>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>HTML, CSS, Java</li>
+                        <li>Web Design</li>
+                        <li>Communication and Delegation</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="cv/Soluele_Mabulu_CV.pdf" class="btn download-cv" download>Download CV</a>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <div class="card">
+            <div class="project-start">
+                <h1>Start a project</h1>
+                <p>Interested in working together? We should queue up a time to chat. I’ll buy the coffee.</p>
+                <button>Let's do this</button>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Living, learning, & leveling up one day at a time.</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/twitter-icon.webp" alt="Twitter"></a>
+                <a href="https://soso-mabulu.github.io/"><img src="images/github-icon.png" alt="Github"></a>
+                <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="#"><img src="images/portfolio-icon.jpg" alt="Portfolio"></a>
+                <a href="#"><img src="images/gmail-icon.png" alt="Email"></a>
+            </div>
+            <p>Handcrafted by me ©Solulele Mabulu 2024</p>
+            <br>
+            <br>
+            <p></p>
+        </div>
+    </section>
 
 </body>
 <script src="js/main.js"></script>

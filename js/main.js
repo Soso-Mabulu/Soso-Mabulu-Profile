@@ -12,15 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 })
 
-document.getElementById('active').addEventListener('change', function() {
-    var profileImage = document.querySelector('.profile-image-container');
-    if (this.checked) {
-        profileImage.classList.add('hide-image');
-    } else {
-        profileImage.classList.remove('hide-image');
-    }
-});
-
 
 // SKillset js
 document.addEventListener("DOMContentLoaded", function() {
@@ -65,3 +56,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Dark mode and light mode js 
+const themeToggleButton = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    // Optionally save the theme preference in local storage
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+// Load theme preference from local storage
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+    }
+});
