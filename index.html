@@ -22,15 +22,32 @@
     <label for="active" class="menu-btn"><span></span></label>
     <label for="active" class="close"></label>
     <div class="wrapper">
+        <div class="close"></div>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html" class="close-menu">Home</a></li>
+            <li><a href="/index.html#about-me" class="close-menu">About</a></li>
+            <li><a href="#" class="close-menu">Projects</a></li>
+            <li><a href=/index.html#skillsets" class="close-menu">Skills</a></li>
+            <li><a href="/index.html#resume" class="close-menu">Resume</a></li>
+            <li><a href="contact.html" class="close-menu">Contact</a></li>
         </ul>
+        
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all elements with the class 'close-menu'
+            const closeMenuLinks = document.querySelectorAll('.close-menu');
+            
+            // Add event listeners to each link
+            closeMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Check the checkbox to close the menu
+                    document.getElementById('active').checked = false;
+                });
+            });
+        });
+    </script>
+    
     <br><br>
 
     <!-- Main Section -->
@@ -98,7 +115,7 @@
       </section>
     
       <!-- About me -->
-    <section class="about-me">
+    <section id="about-me" class="about-me">
         <div class="text">
             <h2>About Me</h2>
             <p>Hello! I'm Soluele Mabulu, a passionate software developer based in Potchefstroom, South Africa. Currently, I'm in my final year of pursuing a Bachelor of Science in Information Technology at North-West University, Potchefstroom. My journey in the tech world has equipped me with strong skills in HTML, CSS, Java, and web design, and I've gained valuable experience working as a student assistant and intern at APJ Automation.</p>
@@ -111,77 +128,73 @@
     </section>
 
     <!-- My Skill set Section -->
-    <section class="skillsets">
-        <h2>My Skillsets</h2>
-        <div class="carousel">
-            <div class="carousel-inner">
-                <!-- Card Set 1 -->
-                <div class="carousel-item active">
-                    <div class="card">
-                        <h3>Project Management</h3>
-                        <p>I start by defining the problem, identifying scope, curating requirement documentation, and estimating the project's ROI.</p>
-                        <div class="icons">
-                            <img src="images/jira.png" alt="Jira">
-                            <img src="images/confluence.png" alt="Confluence">
-                            <img src="images/trello.png" alt="Trello">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3>Web</h3>
-                        <p>My web projects are responsive, accessible, and intuitive for all walks of life while reassuring they will respond the same on any browser.</p>
-                        <div class="icons">
-                            <img src="images/windows.png" alt="Windows">
-                            <img src="images/mac.png" alt="Mac">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3>Mobile</h3>
-                        <p>The foundation for all my designs, my mobile projects specialize in accessibility while utilizing Material Design and Apple Human Design.</p>
-                        <div class="icons">
-                            <img src="images/android.png" alt="Android">
-                            <img src="images/ios.png" alt="iOS">
-                        </div>
-                    </div>
-                </div>
-                <!-- Card Set 2 -->
-                <div class="carousel-item">
-                    <div class="card">
-                        <h3>User Interface</h3>
-                        <p>Known as having "hawk eyes" by my peers, I strive for pixel-perfect finalized designs.</p>
-                        <div class="icons">
-                            <img src="path/to/sketch.png" alt="Sketch">
-                            <img src="path/to/invision.png" alt="InVision">
-                            <img src="path/to/xd.png" alt="XD">
-                            <img src="path/to/figma.png" alt="Figma">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3>User Experience</h3>
-                        <p>Understanding the problem is key to solving it. I strive to mitigate assumption-based decisions and get to the core of the user's pain points.</p>
-                        <div class="icons">
-                            <img src="path/to/miro.png" alt="Miro">
-                            <img src="path/to/figma.png" alt="Figma">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3>Prototyping & Animation</h3>
-                        <p>In tandem with UX, I incorporate prototyping and animation to better help the users and engineers visualize how the product may act.</p>
-                        <div class="icons">
-                            <img src="path/to/invision.png" alt="InVision">
-                            <img src="path/to/protopie.png" alt="ProtoPie">
-                            <img src="path/to/figma.png" alt="Figma">
-                        </div>
-                    </div>
-                </div>
+    <section id="skillsets" class="skillsets">
+        <div class="skills-container">
+            <h2>My Strengths</h2>
+            <br>
+            <div class="skills-grid">
+              <div class="skill">JavaScript (ES5/ES6+)</div>
+              <div class="skill">TypeScript</div>
+              <div class="skill">HTML</div>
+              <div class="skill">CSS</div>
+              <div class="skill">PHP</div>
+              <div class="skill">Python</div>
+              <div class="skill">Flutter</div>
+              <div class="skill">Swift</div>
+              <div class="skill">C++</div>
+              <div class="skill">React</div>
+              <div class="skill">C#</div>
+              <div class="skill">ASP.Net</div>
+              <div class="skill">npm</div>
+              <div class="skill">Node.js</div>
+              <div class="skill">MongoDB</div>
+              <div class="skill">MySQL</div>
             </div>
-            <div class="carousel-indicators">
-                <button class="indicator active" data-slide-to="0"></button>
-                <button class="indicator" data-slide-to="1"></button>
-            </div>
-        </div>
-        <hr>
-        <hr>    
+          </div> 
     </section>
+        <!-- My Skill set Section -->
+        <section id="skillsets" class="skills">
+            <br>
+            <h2>Other Skills </h2>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <!-- Card Set 1 -->
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <h3>Project Management</h3>
+                            <p>I start by defining the problem, identifying scope, curating requirement documentation, and estimating the project's ROI.</p>
+                            <div class="icons">
+                                <img src="images/jira.png" alt="Jira">
+                                <img src="images/confluence.png" alt="Confluence">
+                                <img src="images/trello.png" alt="Trello">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Web</h3>
+                            <p>My web projects are responsive, accessible, and intuitive for all walks of life while reassuring they will respond the same on any browser.</p>
+                            <div class="icons">
+                                <img src="images/windows.png" alt="Windows">
+                                <img src="images/mac.png" alt="Mac">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Mobile</h3>
+                            <p>The foundation for all my designs, my mobile projects specialize in accessibility while utilizing Material Design and Apple Human Design.</p>
+                            <div class="icons">
+                                <img src="images/android.png" alt="Android">
+                                <img src="images/ios.png" alt="iOS">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-slide-to="0"></button>
+                    <button class="indicator" data-slide-to="1"></button>
+                </div>
+            </div>
+            <br><br>   
+        </section>
     
     <!-- Resume Section -->
     <section id="resume" class="resume-section">
