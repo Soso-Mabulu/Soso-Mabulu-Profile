@@ -253,6 +253,7 @@ input[type="checkbox"] {
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 20px;
+    color: var(--light-gray);
 }
 
 .social-icons {
@@ -262,7 +263,7 @@ input[type="checkbox"] {
 }
 
 .social-icons .social-icon {
-    color: var(--dark-gray);
+    color: var(--light-gray);
     text-decoration: none;
     font-size: 18px;
 }
@@ -282,7 +283,7 @@ input[type="checkbox"] {
     height: 100%;
     border-radius: 50%;
     overflow: hidden;
-    background-color: var(--dark-gray);
+    background-color: var(--medium-gray);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -315,13 +316,13 @@ input[type="checkbox"] {
     font-size: 36px;
     margin: 0;
     font-weight: 700;
-    color: var(--dark-gray);
+    color: var(--medium-gray);
 }
 
 .profile-name p {
     margin: 5px 0;
     font-size: 14px;
-    color: var(--medium-gray);
+    color: var(--light-gray);
 }
 
 /* Footer Styles */
