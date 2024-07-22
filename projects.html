@@ -1,27 +1,20 @@
 <!doctype html>
-    <html lang="en" class="bg-white min-h-screen">
+<html lang="en" class="bg-white min-h-screen">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta content="https://sebkay.com/storage/img/favicon-297x297.png" name="msapplication-TileImage">
     <title>
-            Projects |
-            Solulele Mabulu
-            
-        </title>
-    <link rel="preload" as="style" href="https://sebkay.com/build/assets/app-fehj5Vbi.css" />
-    <link rel="modulepreload" href="https://sebkay.com/build/assets/app-OzGZs5nS.js" />
-    <link rel="modulepreload" href="https://sebkay.com/build/assets/vendor-D1hjdJdg.js" />
-    <link rel="modulepreload" href="https://sebkay.com/build/assets/app-CiMGVl4O.js" />
-    <link rel="stylesheet" href="https://sebkay.com/build/assets/app-fehj5Vbi.css" data-navigate-track="reload" />
-    
-    <script type="module" src="https://sebkay.com/build/assets/app-OzGZs5nS.js" data-navigate-track="reload"></script>
-    <script type="module" src="https://sebkay.com/build/assets/app-CiMGVl4O.js" data-navigate-track="reload"></script>
+        Projects | Soluele Mabulu
+    </title>
+    <link rel="stylesheet" href="css/projects.css">
+    <style>
+        /* Add the CSS for modals here */
+    </style>
 </head>
-
-<body class="text-slate-700 font-sans font-light  min-h-screen">
+<body class="text-slate-700 font-sans font-light min-h-screen">
     <div class="p-4 sm:py-14 sm:px-8 xl:py-20">
-        <header class="mb-10 sm:mb-14 xl:mb-20 flex items-center flex-col sm:flex-row gap-6 sm:gap-10 mx-auto max-w-5xl ">
+        <header class="mb-10 sm:mb-14 xl:mb-20 flex items-center flex-col sm:flex-row gap-6 sm:gap-10 mx-auto max-w-5xl">
             <div class="w-[85px] sm:w-[150px] shrink-0">
                 <a href="https://sebkay.com">
                     <picture>
@@ -49,24 +42,22 @@
             </div>
         </header>
         <div class="wysiwyg mb-14 xl:mb-20 mx-auto max-w-5xl">
-            <h1>
-            Projects
-            </h1>
-             <p class="text-xl sm:text-2xl">
+            <h1>Projects</h1>
+            <p class="text-xl sm:text-2xl">
                 Explore some of my recent projects and work.
             </p>
         </div>
         <section class="mx-auto max-w-7xl md:[&>*:nth-child(even)]:flex-row-reverse">
             <div class="mb-14 xl:mb-20 flex flex-col md:flex-row items-center gap-8 md:gap-14">
                 <figure class="md:w-[58.75%] md:shrink-0">
-                    <a class="transition-opacity duration-200 hover:opacity-50" href="https://your-website.com/projects/tell-a-neva">
+                    <a class="transition-opacity duration-200 hover:opacity-50" href="#" onclick="openModal('modalTellANeva')">
                         <img class="rounded-2xl shadow-xl" width="752" height="833" src="images/tell-a-neva-image01.png" alt="Screenshot of Tell-A-Neva Holdings">
                     </a>
                 </figure>
                 <div>
                     <div class="mb-6">
                         <h2 class="font-jost font-light md:text-4xl text-3xl">
-                            <a class="transition-opacity duration-200 hover:opacity-50" href="https://your-website.com/projects/tell-a-neva">
+                            <a class="transition-opacity duration-200 hover:opacity-50" href="#" onclick="openModal('modalTellANeva')">
                                 Tell-A-Neva Holdings
                             </a>
                         </h2>
@@ -75,31 +66,23 @@
                         A versatile platform offering web development, graphic design, and more. Designed to cater to a wide range of client needs.
                     </p>
                     <ul class="flex flex-col gap-2 text-xl text-slate-500">
-                        <li class="before:content-['>']">
-                            Web Development
-                        </li>
-                        <li class="before:content-['>']">
-                            Graphic Design
-                        </li>
-                        <li class="before:content-['>']">
-                            Consulting
-                        </li>
+                        <li class="before:content-['>']">Web Development</li>
+                        <li class="before:content-['>']">Graphic Design</li>
+                        <li class="before:content-['>']">Consulting</li>
                     </ul>
-                    <a class="button mt-8" href="https://your-website.com/projects/tell-a-neva">
-                        View Details
-                    </a>
+                    <a class="button mt-8" href="#" onclick="openModal('modalTellANeva')">View Details</a>
                 </div>
             </div>
             <div class="mb-14 xl:mb-20 flex flex-col md:flex-row items-center gap-8 md:gap-14">
                 <figure class="md:w-[58.75%] md:shrink-0">
-                    <a class="transition-opacity duration-200 hover:opacity-50" href="https://your-website.com/projects/soso-unplugged">
+                    <a class="transition-opacity duration-200 hover:opacity-50" href="#" onclick="openModal('modalSosoUnplugged')">
                         <img class="rounded-2xl shadow-xl" width="752" height="833" src="images/tutorsite-home.png" alt="Screenshot of Soso-Unplugged Tutoring System">
                     </a>
                 </figure>
                 <div>
                     <div class="mb-6">
                         <h2 class="font-jost font-light md:text-4xl text-3xl">
-                            <a class="transition-opacity duration-200 hover:opacity-50" href="https://your-website.com/projects/soso-unplugged">
+                            <a class="transition-opacity duration-200 hover:opacity-50" href="#" onclick="openModal('modalSosoUnplugged')">
                                 Soso-Unplugged Tutoring System
                             </a>
                         </h2>
@@ -108,39 +91,106 @@
                         An online platform providing tutoring services with features to manage schedules, track progress, and communicate with tutors.
                     </p>
                     <ul class="flex flex-col gap-2 text-xl text-slate-500">
-                        <li class="before:content-['>']">
-                            Schedule Management
-                        </li>
-                        <li class="before:content-['>']">
-                            Progress Tracking
-                        </li>
-                        <li class="before:content-['>']">
-                            Communication Tools
-                        </li>
+                        <li class="before:content-['>']">Schedule Management</li>
+                        <li class="before:content-['>']">Progress Tracking</li>
+                        <li class="before:content-['>']">Communication Tools</li>
                     </ul>
-                    <a class="button mt-8" href="https://your-website.com/projects/soso-unplugged">
-                        View Details
-                    </a>
+                    <a class="button mt-8" href="#" onclick="openModal('modalSosoUnplugged')">View Details</a>
                 </div>
             </div>
         </section>
         <footer class="mt-14 xl:mt-20 pt-8 text-sm sm:text-base sm:pt-10 flex justify-between border-t-2 border-slate-200 mx-auto max-w-5xl">
-            <p class="footer__text">
-                &copy; 2024 Soluele Mabulu.
-            </p>
+            <p class="footer__text">&copy; 2024 Soluele Mabulu.</p>
         </footer>
-</div>
+    </div>
 
-<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-31577987-1"></script>
-<script>
-        window.dataLayer = window.dataLayer || [];
+    <!-- Modal for Tell-A-Neva Holdings -->
+    <div id="modalTellANeva" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('modalTellANeva')">&times;</span>
+                <h2>Tell-A-Neva Holdings</h2>
+            </div>
+            <div class="modal-body">
+                <img src="images/tell-a-neva-image01.png" alt="Tell-A-Neva Holdings Screenshot" class="modal-img">
+                <p>Tell-A-Neva Holdings is a versatile platform tailored to meet diverse client needs across various industries. We specialize in web development and graphic design, offering a comprehensive range of services to enhance your digital presence and operational efficiency.</p>
+                <p>Our platform is designed to provide high-quality solutions that are both effective and innovative, helping businesses to stand out in a competitive market.</p>
+                <h3>Features</h3>
+                <ul>
+                    <li><strong>Web Development:</strong> Custom web solutions including site design, development, and maintenance to ensure a robust online presence.</li>
+                    <li><strong>Graphic Design:</strong> Creative design services to craft compelling visual identities for brands, from logos to promotional materials.</li>
+                    <li><strong>Consulting:</strong> Expert advice and strategy development to guide your digital transformation and growth.</li>
+                </ul>
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>Adobe Creative Suite</li>
+                </ul>
+                <p>Whether you're a startup or an established enterprise, Tell-A-Neva Holdings is dedicated to delivering exceptional service tailored to your specific needs.</p>
+            </div>
+            <div class="modal-footer">
+                <a class="button" href="https://github.com/Soso-Mabulu/Tell-A-Neva-Portfolio">View on GitHub</a>
+                <a class="button" href="https://tell-a-neva.netlify.app/">Visit Site</a>
+            </div>
+        </div>
+    </div>
+    
 
-        function gtag() {
-            dataLayer.push(arguments);
+    <!-- Modal for Soso-Unplugged Tutoring System -->
+    <div id="modalSosoUnplugged" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('modalSosoUnplugged')">&times;</span>
+                <h2>Soso-Unplugged Tutoring System</h2>
+            </div>
+            <div class="modal-body">
+                <img src="images/tutorsite-home.png" alt="Soso-Unplugged Tutoring System Screenshot" class="modal-img">
+                <p>The Soso-Unplugged Tutoring System is an advanced online platform designed to streamline the tutoring process for both students and educators. With a focus on user experience, the system facilitates effective learning through various integrated tools and features.</p>
+                <p>Our platform ensures seamless interaction between tutors and students, enabling efficient schedule management, progress tracking, and communication.</p>
+                <h3>Features</h3>
+                <ul>
+                    <li><strong>Schedule Management:</strong> Tools for scheduling sessions, setting reminders, and managing availability to optimize time management.</li>
+                    <li><strong>Progress Tracking:</strong> Features for monitoring student progress, tracking performance, and providing feedback.</li>
+                    <li><strong>Communication Tools:</strong> Integrated messaging and video conferencing to facilitate real-time interactions and support.</li>
+                </ul>
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>firebase Auth and Supabase SQL DB</li>
+                </ul>
+                <p>Our platform aims to enhance the tutoring experience by offering a comprehensive set of tools that cater to the needs of both students and tutors, making learning more engaging and effective.</p>
+            </div>
+            <div class="modal-footer">
+                <a class="button" href="https://github.com/your-github/soso-unplugged">View on GitHub</a>
+                <a class="button" href="https://your-website.com/projects/soso-unplugged">Visit Site</a>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script>
+        // Open modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
         }
-        gtag('js', new Date());
 
-        gtag('config', 'UA-31577987-1');
+        // Close modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName("modal");
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
     </script>
 </body>
 </html>
