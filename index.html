@@ -232,9 +232,21 @@
             <div class="project-start">
                 <h1>Start a project</h1>
                 <p>Interested in working together? We should queue up a time to chat. I’ll buy the coffee.</p>
-                <button>Let's do this</button>
+                <button id="openModalBtn">Let's do this</button>
+                </div>
+            </div>
+            <div id="myModal" class="modal project-start">
+                <div class="modal-content">
+                    <span class="closeModal" onclick="closeModal('myModal')">&times;</span>
+                    <br>
+                    <h2>Choose Method of Communication</h2>
+                    <button id="whatsappBtn">WhatsApp</button>
+                    <button id="gmailBtn">Gmail</button>
+                    <button id="contactBtn">Contact Form</button>
+                </div>
             </div>
         </div>
+        
         <div class="footer">
             <p>Living, learning, & leveling up one day at a time.</p>
             <div class="social-icons">
@@ -253,4 +265,42 @@
 
 </body>
 <script src="js/main.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var modal = document.getElementById("myModal");
+        var openModalBtn = document.getElementById("openModalBtn");
+
+        openModalBtn.onclick = function() {
+            modal.style.display = "flex";
+        }
+
+        document.getElementById("whatsappBtn").onclick = function() {
+            window.location.href = "https://wa.me/YOUR_WHATSAPP_NUMBER";
+        }
+
+        document.getElementById("gmailBtn").onclick = function() {
+            window.location.href = "mailto:YOUR_EMAIL_ADDRESS";
+        }
+
+        document.getElementById("contactBtn").onclick = function() {
+            window.location.href = "contact_form_page.html";
+        }
+    });
+
+    function closeModal(modalId) {
+        var modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    window.onclick = function(event) {
+        var modal = document.getElementById("myModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+</script>
 </html>
