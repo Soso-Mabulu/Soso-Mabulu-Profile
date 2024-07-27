@@ -1,3 +1,49 @@
+/* Light Mode Variables */
+/* Light Mode Variables */
+:root {
+    --primary-blue: #0077b6ff;
+    --dark-blue: #03045eff;
+    --light-gray: #f8f9fa;
+    --medium-gray: #6c757d;
+    --dark-gray: #343a40;
+    --black: #000000;
+    --white: #ffffff;
+    --background-color: #faf6f3;
+    --accent-pink: #ffd1dc;
+    --dark: #1f2426;
+    --gray: #4b5859;
+    --blueGray: #293e41;
+    --lightestBlue: #b4dad7;
+    --lightBlue: #00b4d8ff;
+    --blue: #0077b6ff;
+    --darkBlue: #03045eff;
+    --darkestBlue: #03045eff;
+    --gradient: linear-gradient(45deg, #03045eff, #0077b6ff, #00b4d8ff, #90e0efff, #caf0f8ff);
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+    --primary-blue: #0077b6ff;
+    --dark-blue: #03045eff;
+    --light-gray: #343a40;
+    --medium-gray: #6c757d;
+    --dark-gray: #ffffff;
+    --black: #ffffff;
+    --white: #000000;
+    --background-color: #dee2e4;
+    --accent-pink: #ffd1dc;
+    --dark: #faf6f3;
+    --gray: #4b5859;
+    --blueGray: #293e41;
+    --lightestBlue: #b4dad7;
+    --lightBlue: #00b4d8ff;
+    --blue: #0077b6ff;
+    --darkBlue: #03045eff;
+    --darkestBlue: #03045eff;
+    --gradient: linear-gradient(45deg, #03045eff, #0077b6ff, #00b4d8ff, #90e0efff, #caf0f8ff);
+}
+
+
 pre code.hljs {
     display: block;
     overflow-x: auto;

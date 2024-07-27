@@ -1,7 +1,8 @@
 /* Light Mode Variables */
+/* Light Mode Variables */
 :root {
-    --primary-blue: #007bff;
-    --dark-blue: #0056b3;
+    --primary-blue: #0077b6ff;
+    --dark-blue: #03045eff;
     --light-gray: #f8f9fa;
     --medium-gray: #6c757d;
     --dark-gray: #343a40;
@@ -13,16 +14,17 @@
     --gray: #4b5859;
     --blueGray: #293e41;
     --lightestBlue: #b4dad7;
-    --lightBlue: #519ca4;
-    --blue: #2196a7;
-    --darkBlue: #307982;
-    --darkestBlue: #215961;
+    --lightBlue: #00b4d8ff;
+    --blue: #0077b6ff;
+    --darkBlue: #03045eff;
+    --darkestBlue: #03045eff;
+    --gradient: linear-gradient(45deg, #03045eff, #0077b6ff, #00b4d8ff, #90e0efff, #caf0f8ff);
 }
 
 /* Dark Mode Variables */
 .dark-mode {
-    --primary-blue: #2196a7;
-    --dark-blue: #1f2426;
+    --primary-blue: #0077b6ff;
+    --dark-blue: #03045eff;
     --light-gray: #343a40;
     --medium-gray: #6c757d;
     --dark-gray: #ffffff;
@@ -34,10 +36,11 @@
     --gray: #4b5859;
     --blueGray: #293e41;
     --lightestBlue: #b4dad7;
-    --lightBlue: #519ca4;
-    --blue: #2196a7;
-    --darkBlue: #307982;
-    --darkestBlue: #215961;
+    --lightBlue: #00b4d8ff;
+    --blue: #0077b6ff;
+    --darkBlue: #03045eff;
+    --darkestBlue: #03045eff;
+    --gradient: linear-gradient(45deg, #03045eff, #0077b6ff, #00b4d8ff, #90e0efff, #caf0f8ff);
 }
 
 /* General Styles */
