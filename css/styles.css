@@ -932,9 +932,11 @@ p {
 /* Light Mode Button Styles */
 .theme-button-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 10vh; /* Adjust this if you don't want full viewport height */
+    height: 9vh; /* Adjust this if you don't want full viewport height */
+    margin-left: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .styled-button {
     background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
